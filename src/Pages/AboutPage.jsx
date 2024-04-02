@@ -11,22 +11,7 @@ function AboutPage() {
       <p>In addition, I have a certificate in Web Development, which has equipped me with the skills necessary to build web applications and websites.</p>
       <p>With previous work experience in logistics and operations, I have honed my organizational and problem-solving skills, which I believe are valuable assets in any role.</p>
       <p>I'm particularly enthusiastic about startups and enjoy working in dynamic environments where I can contribute my creativity and adaptability to drive growth and innovation.</p>
-      <h3>Attributes:</h3>
-      <ul>
-        <li>Detail-oriented</li>
-        <li>Strong analytical skills</li>
-        <li>Excellent communication skills</li>
-        <li>Team player</li>
-        <li>Ability to work under pressure</li>
-      </ul>
-      <h3>Soft Skills:</h3>
-      <ul>
-        <li>Problem-solving</li>
-        <li>Time management</li>
-        <li>Critical thinking</li>
-        <li>Adaptability</li>
-        <li>Continuous learning</li>
-      </ul>
+      
     </div>
   );
 }
