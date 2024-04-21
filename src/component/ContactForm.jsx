@@ -1,48 +1,87 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const form = useRef();
+  const EMAIL_TEMPLATE_ID = import.meta.env.EMAIL_TEMPLATE_ID;
+  const EMAIL_SERVICE_ID = import.meta.env.EMAIL_SERVICE_ID;
+  const EMAILJS_PUBLIC_KEY = import.meta.env.EMAILJS_PUBLIC_KEY;
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Here you can handle form submission, for example, send the form data to a backend server
-    console.log(formData);
-    // Clear the form fields after submission
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    emailjs
+      .sendForm(
+        EMAIL_TEMPLATE_ID,
+        EMAIL_SERVICE_ID,
+        form.current,
+        EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          alert("message sent successfully...");
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+    <div className="container">
+      <div className="column">
+        <form className="cf" ref={form} onSubmit={sendEmail}>
+          <div className="field">
+            <label className="label">Name</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                placeholder="Your full name"
+                name="name"
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">Email</label>
+            <div className="control has-icons-left has-icons-right">
+              <input
+                className="input"
+                type="email"
+                placeholder="Your email"
+                name="email"
+              />
+              <span className="icon is-small is-left">
+                <i className="fas fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">Message</label>
+            <div className="control">
+              <textarea
+                className="textarea"
+                placeholder="Textarea"
+                name="message"
+              ></textarea>
+            </div>
+          </div>
+
+          <div className="field is-grouped">
+            <div className="control">
+              <button type="submit" className="button is-link">
+                Submit
+              </button>
+            </div>
+            <div className="control">
+              <button className="button is-link is-light">Cancel</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
-      </div>
-      <button className="button is-dark" type="submit">Send Message</button>
-    </form>
+    </div>
   );
 }
 
