@@ -31,9 +31,12 @@ function App() {
            <h3>Contact Me</h3>
          </div> */}
         </main>
-        {/* <footer>
+        <div className="content has-text-centered">
+        <footer >
        <p>enochampong0@gmail.com</p>
-     </footer> */}
+     </footer>
+        </div>
+        
       </div>
     </>
   );
