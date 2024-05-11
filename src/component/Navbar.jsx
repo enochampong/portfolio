@@ -1,17 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-// function Navbar() {
-//   return (
-//     <nav className="Navbar">
-//       <ul>
-//         <h1 className="h1">Enoch</h1>
-//         <Link to="./"> Home</Link>
-//         <Link to="./Projects"> Projects</Link>
-//         <Link to="./AboutPage"> About </Link>
-//         <Link to="./Contact"> Contact</Link>
-//       </ul>
-//     </nav>
-//   );
-// }
 
 const Navbar = () => {
   function toggleBurgerMenu() {
@@ -47,7 +34,7 @@ const Navbar = () => {
         <div id="navbarBasic" className="navbar-menu">
           <div className="navbar-end">
             <>
-              <NavLink
+              {/* <NavLink
                 to={"/projects"}
                 className="navbar-item"
                 onClick={toggleBurgerMenu}
@@ -60,14 +47,14 @@ const Navbar = () => {
                 onClick={toggleBurgerMenu}
               >
                 Contact
-              </NavLink>
-              <NavLink
+              </NavLink> */}
+              {/* <NavLink
                 to={"/about"}
                 className="navbar-item"
                 onClick={toggleBurgerMenu}
               >
                 About
-              </NavLink>
+              </NavLink> */}
             </>
           </div>
         </div>

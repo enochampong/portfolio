@@ -1,6 +1,7 @@
 import FruitBasket from '../../public/fruitBasket.png';
 import Kunstaushang from '../../public/kunstaushang.png';
 import KeyZoom from '../../public/keyzoom.png';
+import storefront from '../../public/storefront.png';
 
 const projects = [
     {
@@ -14,7 +15,7 @@ const projects = [
         You start with 10 lives, and the game will end when you reach a
         certain score or when you run out of lives.`,
         image: FruitBasket,
-        viewLink: 'https://github.com/enochampong/fruitBasketGame',
+        viewLink: 'https://fruitbasketgame.netlify.app',
         techsUsed: ['HTML', 'CSS', 'JavaScript']
     },
     {
@@ -41,6 +42,14 @@ const projects = [
         viewLink: '',
         techsUsed: ['HTML', 'CSS', 'JavaScript', 'React', 'Express', 'Node', 'MongoDB']
     },
+    {
+        title:'store Front',
+        description:`
+        store front is a basic inventoy order react app, built to help small logistics firms order basic items they need.`,
+        image:storefront,
+        viewLink:'https://inventorystorefront.netlify.app',
+        techsUsed:['HTML', 'CSS', 'JavaScript', 'React', 'Express', 'Node', 'MongoDB']
+    }
 ]
 
 export default projects;
