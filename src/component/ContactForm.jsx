@@ -28,8 +28,6 @@ function ContactForm() {
   };
 
   return (
-    
-
     <div className="container">
       <div className="column">
         <form className="cf" ref={form} onSubmit={sendEmail}>

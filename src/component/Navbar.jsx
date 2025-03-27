@@ -34,27 +34,7 @@ const Navbar = () => {
         <div id="navbarBasic" className="navbar-menu">
           <div className="navbar-end">
             <>
-              {/* <NavLink
-                to={"/projects"}
-                className="navbar-item"
-                onClick={toggleBurgerMenu}
-              >
-                Projects
-              </NavLink>
-              <NavLink
-                to={"/contact"}
-                className="navbar-item"
-                onClick={toggleBurgerMenu}
-              >
-                Contact
-              </NavLink> */}
-              {/* <NavLink
-                to={"/about"}
-                className="navbar-item"
-                onClick={toggleBurgerMenu}
-              >
-                About
-              </NavLink> */}
+ 
             </>
           </div>
         </div>

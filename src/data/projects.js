@@ -32,16 +32,16 @@ const projects = [
         viewLink: '',
         techsUsed: ['HTML', 'CSS', 'JavaScript', 'React', 'Express', 'Node', 'MongoDB', 'Cloudinary', 'Unsplash API']
     },
-    {
-        title: 'Key Zoom',
-        description: `
-            Keyzoom is a startup initiative whereby clients can log into the web
-            app and register to receive an invoice and we will  keep the spare key of the
-            client and ready to ship to the client as soon as requested.`,
-        image: KeyZoom,
-        viewLink: '',
-        techsUsed: ['HTML', 'CSS', 'JavaScript', 'React', 'Express', 'Node', 'MongoDB']
-    },
+    // {
+    //     title: 'Key Zoom',
+    //     description: `
+    //         Keyzoom is a startup initiative whereby clients can log into the web
+    //         app and register to receive an invoice and we will  keep the spare key of the
+    //         client and ready to ship to the client as soon as requested.`,
+    //     image: KeyZoom,
+    //     viewLink: '',
+    //     techsUsed: ['HTML', 'CSS', 'JavaScript', 'React', 'Express', 'Node', 'MongoDB']
+    // },
     {
         title:'store Front',
         description:`
