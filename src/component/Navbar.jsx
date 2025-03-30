@@ -14,7 +14,7 @@ const Navbar = () => {
       >
         <div className="navbar-brand">
           <NavLink to="/" className="navbar-item is-size-4">
-            E N O C H
+            <div className="has-text-weight-bold	">W E L C O M E</div>
           </NavLink>
 
           <a
@@ -33,9 +33,7 @@ const Navbar = () => {
 
         <div id="navbarBasic" className="navbar-menu">
           <div className="navbar-end">
-            <>
- 
-            </>
+            <></>
           </div>
         </div>
       </nav>
