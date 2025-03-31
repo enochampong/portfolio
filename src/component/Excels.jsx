@@ -1,6 +1,5 @@
 import excels from "../data/excel";
 import ExcelCard from "./ExcelCard";
-
 function Excels() {
   return (
     <div className="container">

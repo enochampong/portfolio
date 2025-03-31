@@ -1,6 +1,6 @@
 import FruitBasket from '../../public/fruitBasket.png';
 import Kunstaushang from '../../public/kunstaushang.png';
-import KeyZoom from '../../public/keyzoom.png';
+//import KeyZoom from '../../public/keyzoom.png';
 import storefront from '../../public/storefront.png';
 
 const projects = [
