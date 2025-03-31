@@ -2,7 +2,7 @@
 import Navbar from "./component/Navbar";
 import Contact from "./Pages/Contact";
 import HomePage from "./Pages/HomePage";
-
+import Excels from "./component/Excels";
 import Projects from "./component/Projects";
 import { Routes, Route } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage";
@@ -15,6 +15,7 @@ function App() {
       <Navbar />
       <div className="container">
         <Intro />
+        <Excels/>
         <Projects />
         <Contact />
         <main>
