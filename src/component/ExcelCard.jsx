@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ExcelCard = ({ title, image, description, techsUsed, viewlink }) => {
+const ExcelCard = ({ title, image, description, techsUsed }) => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="card">
       <div className="card-image">
@@ -23,16 +25,61 @@ const ExcelCard = ({ title, image, description, techsUsed, viewlink }) => {
               </span>
             ))}
 
-          <div className=" ">
-            <a href={viewlink} target="_blank" rel="noopener noreferrer">
-              <button className="button is-primary button is-primary is-light ">
-                View
-              </button>
-            </a>
+          <div>
+            <button
+              className="button is-primary is-light"
+              onClick={() => setShowModal(true)}
+            >
+              View
+            </button>
           </div>
+
+          {showModal && (
+            <div
+              className="modal is-active"
+              style={{
+                background: "rgba(0,0,0,0.7)",
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100vw",
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 1000,
+              }}
+              onClick={() => setShowModal(false)}
+            >
+              <div
+                style={{
+                  background: "#fff",
+                  padding: "1rem",
+                  borderRadius: "8px",
+                  maxWidth: "90vw",
+                  maxHeight: "90vh",
+                  overflow: "auto",
+                }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img
+                  src={image}
+                  alt="Large view"
+                  style={{ maxWidth: "80vw", maxHeight: "80vh" }}
+                />
+                <button
+                  className="button is-danger mt-3"
+                  onClick={() => setShowModal(false)}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
 };
+
 export default ExcelCard;
